@@ -1,7 +1,5 @@
 # Predicción de Abandono de Clientes (Churn) — Machine Learning End-to-End
-
-Segundo proyecto del portafolio de Data Science. Continuación directa del
-**Proyecto 1** (procesamiento a gran escala con PySpark): aquí se convierten
+Aquí se convierten
 las transacciones en una tabla de clientes con variables **RFM** (Recencia,
 Frecuencia, Valor Monetario) y se entrena un modelo de clasificación para
 predecir abandono.
@@ -15,8 +13,7 @@ campañas de retención en ellos.
 
 ## Sobre la variable objetivo
 
-Los datos transaccionales originales (Proyecto 1) son sintéticos y sin un
-patrón real de abandono. La etiqueta de `churn` se construyó combinando
+La etiqueta de `churn` se construyó combinando
 recencia, frecuencia y valor monetario con una función logística + ruido
 aleatorio — un enfoque transparente y documentado en el notebook, que
 permite practicar el flujo completo de ML supervisado con un problema
@@ -51,7 +48,7 @@ realista (no perfectamente separable, sin fuga de datos).
 ## Estructura del repositorio
 
 ```
-proyecto2_churn/
+prediction_analysis_churn/
 ├── churn_prediction_analysis.ipynb   # notebook principal, ya ejecutado
 ├── modelo_churn_random_forest.pkl    # modelo entrenado serializado
 ├── eda_boxplots.png
@@ -64,9 +61,6 @@ proyecto2_churn/
 
 ## Cómo ejecutarlo
 
-Requiere haber generado antes los datos del Proyecto 1
-(`../proyecto1_spark/data/transactions/`).
-
 ```bash
 pip install pyspark pandas numpy scikit-learn matplotlib seaborn joblib
 jupyter notebook churn_prediction_analysis.ipynb
@@ -77,9 +71,3 @@ jupyter notebook churn_prediction_analysis.ipynb
 Priorizar campañas de retención en clientes con recencia alta y frecuencia
 baja de compra, antes de que crucen el umbral de abandono: retener a un
 cliente existente es más barato que adquirir uno nuevo.
-
-## Próximos pasos del portafolio
-
-El siguiente proyecto explorará **segmentación de clientes con aprendizaje
-no supervisado** (clustering) para complementar este modelo de churn con
-perfiles de cliente accionables para marketing.
