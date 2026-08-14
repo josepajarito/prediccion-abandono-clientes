@@ -71,3 +71,6 @@ jupyter notebook churn_prediction_analysis.ipynb
 Priorizar campañas de retención en clientes con recencia alta y frecuencia
 baja de compra, antes de que crucen el umbral de abandono: retener a un
 cliente existente es más barato que adquirir uno nuevo.
+
+
+
